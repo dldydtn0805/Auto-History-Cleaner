@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Auto History Cleaner</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            width: 300px;
+            padding: 10px;
+        }
+        h1 {
+            font-size: 18px;
+            color: #4285f4;
+            margin-bottom: 15px;
+        }
+        button {
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        button:hover {
+            background-color: #3367d6;
+        }
+        .status {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+        .status-time {
+            font-weight: bold;
+        }
+        .status-badge {
+            display: inline-block;
+            padding: 3px 6px;
+            border-radius: 3px;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+        .status-badge.active {
+            background-color: #0f9d58;
+            color: white;
+        }
+        .status-badge.inactive {
+            background-color: #db4437;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<h1>Auto History Cleaner</h1>
+
+<div id="statusBadge" class="status-badge active">활성화됨</div>
+
+<p>이 확장 프로그램은 Chrome을 시작할 때마다 자동으로 방문 기록과 다운로드 목록을 삭제합니다.</p>
+
+<button id="cleanNow">지금 삭제하기</button>
+<button id="forceClean">브라우저 재실행 시 삭제 강제 설정</button>
+
+<div class="status">
+    <p>마지막 삭제 시간: <span id="lastCleanedTime" class="status-time">기록 없음</span></p>
+</div>
+
+<script src="popup.js"></script>
+</body>
+</html>

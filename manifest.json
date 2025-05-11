@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Auto History Cleaner",
+  "version": "1.0",
+  "description": "Automatically cleans browser history and downloads when Chrome is opened",
+  "permissions": [
+    "browsingData",
+    "storage",
+    "tabs",
+    "alarms"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon.png",
+      "48": "images/icon.png",
+      "128": "images/icon.png"
+    }
+  },
+  "icons": {
+    "16": "images/icon.png",
+    "48": "images/icon.png",
+    "128": "images/icon.png"
+  }
+}
